@@ -1,10 +1,16 @@
-require "./divisibleParTrois"
-require "./DivisibleParCinq"
-require "./DivisibleParQuinze"
+require "./divisibleParTrois.rb"
+require "./divisibleParCinq.rb"
+require "./DivisibleParQuinze.rb"
 
-100.each do | number|
+100.times do | number|
 	print number
-	if (divParQuinze(number)) do puts "Fizz Buzz"; end
-	elsif (divParCinq(number)) do puts "Buzz"; end
-	elsif (divParTrois(number)) do puts "Fizz"; end 
+	if (divParQuinze(number))
+    puts " Fizz Buzz"
+	elsif (divParCinq(number))
+    puts " Buzz"
+	elsif (divParTrois(number))
+    puts " Fizz"
+  else
+    puts ""
+  end
 end
